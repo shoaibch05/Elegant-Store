@@ -1,0 +1,71 @@
+/* Background gradient from login component */
+.background-radial-gradient {
+    background-color: hsl(218, 41%, 15%);
+    background-image: radial-gradient(
+            650px circle at 0% 0%,
+            hsl(218, 41%, 35%) 15%,
+            hsl(218, 41%, 30%) 35%,
+            hsl(218, 41%, 20%) 75%,
+            hsl(218, 41%, 19%) 80%,
+            transparent 100%
+        ),
+        radial-gradient(
+            1250px circle at 100% 100%,
+            hsl(218, 41%, 45%) 15%,
+            hsl(218, 41%, 30%) 35%,
+            hsl(218, 41%, 20%) 75%,
+            hsl(218, 41%, 19%) 80%,
+            transparent 100%
+        );
+}
+
+/* Top strip styling */
+.top-strip {
+    text-align: center;
+    color: white;
+    padding: 10px 0;
+    font-size: 1.5rem;
+    font-weight: bold;
+    background: inherit;
+}
+
+/* Layout structure */
+.main-layout {
+    display: flex;
+}
+
+/* Sidebar styling */
+.sidebar {
+    width: 200px;
+    padding: 20px;
+    background: inherit;
+    color: white;
+    height: 100vh;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar li {
+    margin: 15px 0;
+}
+
+.sidebar a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+.sidebar a:hover {
+    text-decoration: underline;
+}
+
+/* Main content styling */
+.content {
+    flex: 1;
+    padding: 20px;
+    background-color: white; /* Adjust as needed */
+    overflow: auto;
+}

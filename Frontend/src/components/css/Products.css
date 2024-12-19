@@ -1,0 +1,225 @@
+/* General Page Styling */
+body {
+    font-family: 'Roboto', sans-serif;
+    background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+    margin: 0;
+    padding: 0;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    margin-top: -70px;
+    justify-content: flex-end; /* Adjust spacing */
+    padding: 10px 20px;
+}
+
+.search-box {
+    flex: 1; /* Adjust size of the search box */
+    max-width: 600px; /* Optional: Limit search box width */
+    margin-right: 20px; /* Space between search box and cart */
+}
+
+.cart-icon {
+    margin-left: 10px;
+    font-size: 1.5rem; /* Adjust icon size */
+    cursor: pointer;
+}
+
+/* Cart Icon Styling */
+.cart-icon {
+    /* position: fixed; */
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+    background-color: white;
+    border-radius: 50%;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 5px;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+}
+
+.cart-icon:hover {
+    transform: scale(1.1);
+}
+
+/* Product Grid Styling */
+.product-card {
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.product-card img {
+    border-bottom: 1px solid #ddd;
+}
+
+.product-card .MuiCardContent-root {
+    padding: 20px;
+    text-align: center;
+}
+
+.product-card h6 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.product-card p {
+    font-size: 0.9rem;
+    color: #777;
+    margin-bottom: 10px;
+}
+
+.product-card .MuiTypography-root {
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+.product-card .MuiButton-root {
+    width: 90%;
+    margin: 10px auto;
+    display: block;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.product-card .MuiButton-containedPrimary {
+    background-color: #3498db;
+    color: white;
+    transition: background-color 0.3s ease;
+}
+
+.product-card .MuiButton-containedPrimary:hover {
+    background-color: #2980b9;
+}
+
+.product-card .MuiButton-containedError {
+    background-color: #e74c3c;
+    color: white;
+    transition: background-color 0.3s ease;
+}
+
+.product-card .MuiButton-containedError:hover {
+    background-color: #c0392b;
+}
+
+/* Disabled Buttons */
+.product-card .MuiButton-contained:disabled {
+    background-color: #ddd;
+    color: #aaa;
+    cursor: not-allowed;
+}
+
+/* Search Component Styling */
+.search-bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.search-bar input {
+    width: 50%;
+    z-index: 1000;
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 20px;
+    border: 1px solid #ddd;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    outline: none;
+    transition: box-shadow 0.2s ease-in-out;
+}
+
+.search-bar input:focus {
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    border-color: #3498db;
+}
+
+/* Cart Modal Styling */
+.modal-content {
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    background: #f8f9fa;
+}
+
+.modal-header {
+    border-bottom: 1px solid #ddd;
+    background: #3498db;
+    color: white;
+    padding: 15px 20px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.modal-body {
+    padding: 20px;
+    font-size: 1rem;
+    color: #333;
+}
+
+.modal-footer {
+    border-top: 1px solid #ddd;
+    background: #f4f6f8;
+    padding: 15px 20px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.modal-footer .btn-primary {
+    background-color: #3498db;
+    border-color: #3498db;
+    transition: background-color 0.3s ease;
+}
+
+.modal-footer .btn-primary:hover {
+    background-color: #2980b9;
+    border-color: #2980b9;
+}
+
+.modal-footer .btn-secondary {
+    background-color: #e74c3c;
+    border-color: #e74c3c;
+    transition: background-color 0.3s ease;
+}
+
+.modal-footer .btn-secondary:hover {
+    background-color: #c0392b;
+    border-color: #c0392b;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .search-bar input {
+        width: 80%;
+    }
+
+    .product-card .MuiButton-root {
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .search-bar input {
+        width: 100%;
+    }
+
+    .product-card h6 {
+        font-size: 1rem;
+    }
+
+    .product-card p {
+        font-size: 0.8rem;
+    }
+}
